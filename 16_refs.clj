@@ -34,10 +34,6 @@
  (= 20 (do
          (dosync (alter the-world #(+ % 20)))))
 
-  ;; Could also have written:
-  ;; (= 20 (do
-          ;; (dosync (alter the-world (partial + 20)))))
-
  "Two worlds are better than one"
  (= ["Real Jerry" "Bizarro Jerry"]
     (do
