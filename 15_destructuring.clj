@@ -29,22 +29,6 @@
                         (cons first-name
                               (interpose "aka" (cons last-name aliases)))))))
 
- ;; An alternate solution here could also have been...
- ;; ((let [[first-name last-name & aliases]
- ;;        (list "Rich" "Hickey" "The Clojurer" "Go Time" "Lambda Guru")]
- ;;    (str
- ;;     first-name " "
- ;;     (let [[x y z] aliases]
- ;;       (apply str (interpose " aka " [last-name x y z]))))))
-
- ;; Or...a little less elegantly, perhaps
- ;; ((let [[first-name last-name & aliases]
- ;;        (list "Rich" "Hickey" "The Clojurer" "Go Time" "Lambda Guru")]
- ;;    (str first-name " "
- ;;         last-name " aka "
- ;;         (nth aliases 0) " aka "
- ;;         (nth aliases 1) " aka "
- ;;         (nth aliases 2))))
 
  "You can regain the full argument if you like arguing"
  (= {:original-parts ["Stephen" "Hawking"] :named-parts {:first "Stephen" :last "Hawking"}}
