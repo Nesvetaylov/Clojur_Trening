@@ -23,18 +23,6 @@
   (= [:a :a :a :a :a :a :a :a :a :a]
      (repeat 10 :a))
 
-  "Iteration can be used for repetition"
-  ;; NOTE: A valid and possible solution is provided below,
-  ;;       but I think here the intended goal is to use the
-  ;;       identity function instead - likely to familiarize
-  ;;       a new Clojurian to the notion that the parameter
-  ;;       to be recieved by the function provided to
-  ;;       iterate ([fn x]) may take (and often does)
-  ;;       the second parameter, x.
-
-  ;; (= (repeat 100 "hello")
-  ;;    (take 100 (iterate (fn [_] "hello") "hello")))
-
   (= (repeat 100 "hello")
      (take 100 (iterate (fn [x] x) "hello"))))
 
